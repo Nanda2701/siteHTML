@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliaçao Final UC00604</title>
+    <link rel="stylesheet" href="css/main_style.css">
+</head>
+<body>
+    <header>
+        <h1>Confirmação de Submissão</h1>
+        <p>Avaliação Prática - UC00604</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="Pagina2.html">Cursos (Tabelas)</a>
+        <a href="Pagina3.html">Inscrição (Formulário)</a>
+    </nav>
+
+    <main>
+        <h2>Dados Recebidos (via Método GET)</h2>
+        <p>O servidor fictício interceptou os seguintes parâmetros enviados no URL da requisição:</p>
+
+        <div class="dados-box">
+            <p><strong>Nome do Formando:</strong> <span id="res-nome">MIGUEL</span></p>
+            <p><strong>E-mail:</strong> <span id="res-email">teste@mail.com</span></p>
+            <p><strong>Idade:</strong> <span id="res-idade">22</span> anos</p>
+            <p><strong>Unidade Selecionada:</strong> <span id="res-modulo">UC00604</span></p>
+        </div>
+
+        <p style="margin-top: 25px;">
+            <a href="Pagina3.html" style="color: #2c4257; font-weight: bold;">&larr; Voltar e submeter novo formulário</a>
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2026 - UFCD 00604 | Formando: Fernanda Melo
+    </footer>
+
+    <script>
+        const dataSent = new URLSearchParams(window.location.search);
+
+        document.getElementById("res-nome").textContent = dataSent.get("nome");
+        document.getElementById("res-email").textContent = dataSent.get("email");
+        document.getElementById("res-idade").textContent = dataSent.get("idade");
+        document.getElementById("res-modulo").textContent = dataSent.get("modulo");
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliaçao Final UC00604</title>
+    <link rel="stylesheet" href="css/main_style.css">
+</head>
+<body>
+    <header>
+        <h1>Inscrição no Exame Prático</h1>
+        <p>Avaliação Prática - UC00604</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="Pagina2.html">Cursos (Tabelas)</a>
+        <a href="Pagina3.html">Inscrição (Formulário)</a>
+    </nav>
+
+    <main>
+        <h2>Dados do Formando</h2>
+        <p>Preencha o formulário abaixo. Todos os campos possuem validação obrigatória.</p>
+
+        <form action="Pagina4.html" method="get">
+            <div class="form-group">
+                <label for="nome">Nome Completo (Mínimo 3 caracteres):</label>
+                <input type="text" id="nome" name="nome" minlength="3" placeholder="Digite o seu nome" required>
+        
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail Institucional:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@escola.pt" required>
+        
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade (Entre 16 e 99 anos):</label>
+                <input type="number" id="idade" name="idade" min="16" max="99" placeholder="Ex: 25" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="modulo">Módulo em Avaliação:</label>
+                <select id="modulo" name="modulo" required>
+                    <option value="">-- Selecione uma opção --</option>
+                    <option value="UC00604">UC00604 - Construção de Páginas Web</option>
+                    <option value="UF00601">UF00601 - Modelação de Dados</option>
+                </select>
+            </div>
+
+            <button type="submit">Submeter Inscrição</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2026 - UFCD 00604 | Formando: Fernanda Melo
+    </footer>
+</body>
+</html>
